@@ -1,57 +1,22 @@
-* {
-  font-family: "Nunito", sans-serif;
-  background-color: #ffffff;
-  color: #003f00;
-}
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #003f00;
-  border: 2px solid #003f00;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-.button:hover {
-  background-color: #005a00;
-  border-color: #003f00;
+#image-preview {
+  display: none;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
 }
 
-.carousel {
-  padding: 2rem;
-  width: 500px;
+.card-img-custom {
+  padding-top: 20px;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-.carousel-inner .carousel-item img {
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto;
-}
-.carousel-caption {
+
+.card-text {
   height: 80px;
   position: static;
   text-align: center;
-  padding-top: 10px;
   padding: 10px;
-  margin-bottom: 10px;
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-}
-.carousel-indicators [data-bs-target] {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.carousel-indicators .active {
-  background-color: #003f00;
-  opacity: 1;
-}
-
-.custom {
-  background-color: #003f00;
 }

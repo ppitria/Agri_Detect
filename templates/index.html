@@ -8,118 +8,153 @@
     <!-- NAVBAR -->
     {% include 'navbar.html' %}
 
-    <div class="container">
+    <div class="container vh-100">
       <div class="row justify-content-center mt-5 text-center">
-        <h1>Jaga Kesehatan Cabai Rawitmu dengan Deteksi Dini!</h1>
-      </div>
-      <div class="row justify-content-center mt-5 text-center">
-        <div
-          id="carouselExampleCaptions"
-          class="carousel slide"
-          data-bs-ride="carousel"
-          data-bs-interval="2000"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="../static/image/slide-1.png"
-                class="d-block"
-                alt="First slide"
-              />
-              <div class="carousel-caption">
-                <p>
-                  Deteksi penyakit dan hama melalui ambil gambar lewat kamera
-                  handphone, atau mengunggah gambar.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="../static/image/slide-2.png"
-                class="d-block"
-                alt="Second slide"
-              />
-              <div class="carousel-caption">
-                <p>Dapatkan infromasi budidaya tanaman cabai rawit</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="../static/image/slide-3.png"
-                class="d-block"
-                alt="Third slide"
-              />
-              <div class="carousel-caption">
-                <p>
-                  Dapatkan informasi hama dan penyakit yang mungkin menyerang
-                  tanaman cabai rawit
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="../static/image/slide-4.png"
-                class="d-block"
-                alt="Fourth slide"
-              />
-              <div class="carousel-caption">
-                <p>
-                  Dapatkan informasi terkait obat-obatan untuk kebutuhan tanaman
-                  cabai rawit
-                </p>
-              </div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+        <div class="col mb-3">
+          <h1>Jaga Kesehatan Cabai Rawitmu dengan Deteksi Dini!</h1>
         </div>
-
-        <a href="#" class="button">Deteksi Sekarang</a>
       </div>
+      <div class="row justify-content-center mt-2 text-center">
+        <div class="col-4">
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide align-self-center"
+            data-bs-ride="carousel"
+            data-bs-interval="2000"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-center">
+                  <div class="card">
+                    <img
+                      src="../static/image/slide-1.png"
+                      class="card-img-top card-img-custom"
+                      alt="First Slide"
+                    />
+                    <div class="card-body">
+                      <p class="card-text">
+                        Deteksi penyakit dan hama melalui ambil gambar lewat
+                        kamera handphone, atau mengunggah gambar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                  <div class="card">
+                    <img
+                      src="../static/image/slide-2.png"
+                      class="card-img-top card-img-custom"
+                      alt="Second Slide"
+                    />
+                    <div class="card-body">
+                      <p class="card-text">
+                        Dapatkan informasi budidaya tanaman cabai rawit
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                  <div class="card">
+                    <img
+                      src="../static/image/slide-3.png"
+                      class="card-img-top card-img-custom"
+                      alt="Third Slide"
+                    />
+                    <div class="card-body">
+                      <p class="card-text">
+                        Dapatkan informasi hama dan penyakit yang mungkin
+                        menyerang tanaman cabai rawit
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                  <div class="card">
+                    <img
+                      src="../static/image/slide-4.png"
+                      class="card-img-top card-img-custom"
+                      alt="Fourth Slide"
+                    />
+                    <div class="card-body">
+                      <p class="card-text">
+                        Dapatkan informasi terkait obat-obatan untuk kebutuhan
+                        tanaman cabai rawit
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-center text-center">
+        <div class="col-12 col-lg-6 mb-3 order-2">
+          <a
+            href="#"
+            class="btn mt-5"
+            style="background-color: #003f00; color: #ffffff; font-size: 20px"
+            data-bs-toggle="modal"
+            data-bs-target="#uploadModal"
+          >
+            Deteksi Sekarang
+          </a>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div
+          class="col-6 card m-3 border-0"
+          style="box-shadow: 0 0 10px #005f0095"
+        >
+          <div class="card-body">
+            <div class="d-flex align-items-center border-0">
+              <div style="height: 70px">
+                <img
+                  src="../static/image/history.png"
+                  alt=""
+                  style="height: 100%"
+                />
+              </div>
+              <div class="ps-3"><h5>History</h5></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      {% include 'pop-up.html' %}
     </div>
   </body>
   <!-- JS BOOTSTRAP -->
@@ -128,4 +163,17 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
+
+  <!-- MY OWN JS -->
+  <script>
+    function previewImage(event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var output = document.getElementById("image-preview");
+        output.src = reader.result;
+        output.style.display = "block";
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
 </html>
