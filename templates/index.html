@@ -8,155 +8,184 @@
     <!-- NAVBAR -->
     {% include 'navbar.html' %}
 
-    <div class="container vh-100">
-      <div class="row justify-content-center mt-5 text-center">
-        <div class="col mb-3">
+    <section class="home" id="home">
+      <div class="container">
+        <div class="text-home">
           <h1>Jaga Kesehatan Cabai Rawitmu dengan Deteksi Dini!</h1>
+          <p>
+            Alat <span>deteksi tanaman cabai rawit</span>, kami akan membantu
+            Anda mengetahui penyakut yang menjangkit tanaman cabai rawit hanya
+            dengan sebuah gambar.
+          </p>
         </div>
-      </div>
-      <div class="row justify-content-center mt-2 text-center">
-        <div class="col-4">
-          <div
-            id="carouselExampleCaptions"
-            class="carousel slide align-self-center"
-            data-bs-ride="carousel"
-            data-bs-interval="2000"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      src="../static/image/slide-1.png"
-                      class="card-img-top card-img-custom"
-                      alt="First Slide"
-                    />
-                    <div class="card-body">
-                      <p class="card-text">
-                        Deteksi penyakit dan hama melalui ambil gambar lewat
-                        kamera handphone, atau mengunggah gambar.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      src="../static/image/slide-2.png"
-                      class="card-img-top card-img-custom"
-                      alt="Second Slide"
-                    />
-                    <div class="card-body">
-                      <p class="card-text">
-                        Dapatkan informasi budidaya tanaman cabai rawit
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      src="../static/image/slide-3.png"
-                      class="card-img-top card-img-custom"
-                      alt="Third Slide"
-                    />
-                    <div class="card-body">
-                      <p class="card-text">
-                        Dapatkan informasi hama dan penyakit yang mungkin
-                        menyerang tanaman cabai rawit
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      src="../static/image/slide-4.png"
-                      class="card-img-top card-img-custom"
-                      alt="Fourth Slide"
-                    />
-                    <div class="card-body">
-                      <p class="card-text">
-                        Dapatkan informasi terkait obat-obatan untuk kebutuhan
-                        tanaman cabai rawit
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="upload">
+          <button class="camera" id="camera-btn">
+            Gunakan Kamera
+            <img
+              src="../static/image/camera.png"
+              alt=""
+              width="30"
+              height="auto"
+            />
+          </button>
+          <p>Atau</p>
+          <form id="image-upload-form" enctype="multipart/form-data">
+            <input
+              type="file"
+              id="image-input"
+              name="image"
+              accept="image/*"
+              style="display: none"
+            />
+            <div id="drop-zone" class="w-50">
+              Drop files here or click to upload.
             </div>
-
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="prev"
+          </form>
+          <button class="detect-btn" id="detect-btn">Deteksi Sekarang</button>
+          <div id="loading" class="loading hidden"></div>
+          <div class="row justify-content-center">
+            <div
+              class="card text-center w-50 my-5"
+              style="box-shadow: 0 0 10px #005f0095"
             >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center align-items-center text-center">
-        <div class="col-12 col-lg-6 mb-3 order-2">
-          <a
-            href="#"
-            class="btn mt-5"
-            style="background-color: #003f00; color: #ffffff; font-size: 20px"
-            data-bs-toggle="modal"
-            data-bs-target="#uploadModal"
-          >
-            Deteksi Sekarang
-          </a>
-        </div>
-      </div>
-
-      <div class="row justify-content-center">
-        <div
-          class="col-6 card m-3 border-0"
-          style="box-shadow: 0 0 10px #005f0095"
-        >
-          <div class="card-body">
-            <div class="d-flex align-items-center border-0">
-              <div style="height: 70px">
-                <img
-                  src="../static/image/history.png"
-                  alt=""
-                  style="height: 100%"
-                />
+              <div
+                class="card-header"
+                style="font-size: 1.5rem; font-weight: 700"
+              >
+                Diagnosa
               </div>
-              <div class="ps-3"><h5>History</h5></div>
+              <div class="card-body">
+                <div id="result">
+                  <ul class="box-result"></ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Modal -->
-      {% include 'pop-up.html' %}
-    </div>
+    <section class="about" id="about">
+      <div class="container about-content">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-md-8">
+            <h1>Tentang</h1>
+            <p class="text-content">
+              AgriDetect adalah aplikasi berbasis web yang dirancang khusus
+              untuk mendeteksi penyakit pada tanaman cabai rawit. Dengan
+              menggunakan teknologi pengolahan gambar dan kecerdasan buatan,
+              AgriDetect memungkinkan pengguna untuk mengambil gambar tanaman
+              cabai mereka melalui kamera handphone atau mengunggah gambar yang
+              sudah ada. Setelah gambar diproses, aplikasi ini secara otomatis
+              menganalisis kondisi tanaman dan mengidentifikasi jenis-jenis
+              penyakit yang mungkin terjadi, seperti virus kuning atau serangan
+              hama tertentu. Agridetect hadir untuk memudahkan para petani dalam
+              menjaga kesehatan tanaman cabai mereka dengan cepat dan akurat
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="../static/image/about.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="use">
+      <div class="container">
+        <div class="col-md-8 mx-auto">
+          <h1 class="text-center py-2">Bagaimana penggunaannya?</h1>
+          <div class="row align-items-center justify-content-center py-3">
+            <div class="col-md-2">
+              <img src="../static/image/capture.png" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md-8">
+              <h5>Ambil atau Unggah Gambar</h5>
+              <p class="text-content">
+                Pengguna dapat menggunakan kamera handphone untuk mengambil
+                gambar tanaman cabai rawit secara langsung melalui aplikasi atau
+                mengunggah gambar yang sudah ada dari galeri.
+              </p>
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-center py-3">
+            <div class="col-md-2">
+              <img src="../static/image/process.png" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md-8">
+              <h5>Memproses Gambar</h5>
+              <p class="text-content">
+                Gambar yang diambil atau diunggah akan diproses menggunakan
+                teknologi pengolahan gambar untuk mempersiapkan data masukan
+                bagi model deteksi penyakit.
+              </p>
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-center py-3">
+            <div class="col-md-2">
+              <img
+                src="../static/image/detection.png"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-md-8">
+              <h5>Deteksi Otomatis</h5>
+              <p class="text-content">
+                Selanjutnya model mengidentifikasi berbagai jenis penyakit pada
+                tanaman cabai berdasarkan gambar yang diproses.
+              </p>
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-center py-3">
+            <div class="col-md-2">
+              <img src="../static/image/result.png" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md-8">
+              <h5>Hasil Deteksi</h5>
+              <p class="text-content">
+                Setelah proses deteksi selesai, pengguna akan menerima laporan
+                detail mengenai kondisi tanaman cabai mereka. Ini termasuk
+                informasi tentang jenis penyakit terdeteksi, penyebabnya apa,
+                hingga penanggulangannya bagaimana.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <h5>Tautan Cepat</h5>
+            <ul class="list-unstyled">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">Tentang</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-center text-md-right">
+            <h5>Ikuti Kami</h5>
+            <a href="#" class="btn btn-outline-light btn-sm"
+              ><img
+                src="../static/image/instagram.png"
+                alt=""
+                width="24"
+                class="img-fluid pe-2"
+              />Instagram</a
+            >
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <p class="mb-0">&copy; 2024 AgriDetect. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
+
   <!-- JS BOOTSTRAP -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -165,15 +194,5 @@
   ></script>
 
   <!-- MY OWN JS -->
-  <script>
-    function previewImage(event) {
-      var reader = new FileReader();
-      reader.onload = function () {
-        var output = document.getElementById("image-preview");
-        output.src = reader.result;
-        output.style.display = "block";
-      };
-      reader.readAsDataURL(event.target.files[0]);
-    }
-  </script>
+  <script src="../static/script.js"></script>
 </html>
