@@ -102,6 +102,11 @@ function previewImage(file) {
       imageInput.value = "";
       dropZone.innerHTML = "Drop files here or click to upload.";
     });
+
+    // Set file to input element
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(file);
+    imageInput.files = dataTransfer.files;
   };
   reader.readAsDataURL(file);
 }
@@ -116,7 +121,17 @@ detectBtn.addEventListener("click", (event) => {
   // Mengirimkan gambar yang diunggah ke backend Flask
   const formData = new FormData();
   const file = imageInput.files[0];
+
+  if (!file) {
+    console.error("No file selected");
+    alert("No file selected. Please upload or capture an image.");
+    detectBtn.classList.remove("hidden");
+    loadingDiv.classList.add("hidden");
+    return;
+  }
+
   formData.append("image", file);
+  console.log("File selected: ", file.name); // Logging file name
 
   fetch("/upload", {
     method: "POST",
