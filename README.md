@@ -9,4 +9,4 @@ Aplikasi berbasis web yang dirancang khusus untuk mendeteksi penyakit pada tanam
 # Link-Link Pengumpulan
 1. Proposal: https://www.canva.com/design/DAGELkMd_bc/HbijUA3a2rfCqoIdU-llfQ/edit?utm_content=DAGELkMd_bc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 2. Artikel: https://docs.google.com/document/d/1TuNiNg0vNGi15bv8RIuC80IyjAIgLlecj0XGXYdxmWA/edit?usp=sharing
-3. Link Demo: 
+3. Link Demo: https://youtu.be/9UcIqyZbU0A
